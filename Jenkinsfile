@@ -14,16 +14,15 @@ pipeline {
         }
         stage("Build Image") {
             steps {
-                steps {
-                    script {
-                        app = docker.build("stonzim/selenium")
-                    }
+                script {
+                    app = docker.build("stonzim/selenium")
                 }
             }
         }
         stage("Push Image") {
             steps {
                 script {
+                    // registry url is blank for dockerhub
                     docker.withRegistry("", "dockerhub-creds") {
                         app.push("latest")
                     }
