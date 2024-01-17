@@ -20,6 +20,7 @@
         <maven.jar.version>3.3.0</maven.jar.version>
         <maven.surefire.version>3.1.2</maven.surefire.version>
         <maven.resources.plugin>3.3.1</maven.resources.plugin>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- output directory -->
         <package.directory>${project.build.directory}/docker-resources</package.directory>
     </properties>
