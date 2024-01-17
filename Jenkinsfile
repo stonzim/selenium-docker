@@ -8,7 +8,7 @@ pipeline {
         }
         stage("Build Image") {
             steps {
-                sh "docker build -t=stonzim/selenium"
+                sh "docker build -t=stonzim/selenium ."
             }
         }
         stage("Push Image") {
