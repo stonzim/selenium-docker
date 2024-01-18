@@ -17,9 +17,20 @@ pipeline {
         }
 
         stage("Push Image") {
+            environment {
+                DOCKER_HUB = credentials('dockerhub-creds')
+            }
             steps {
+                sh 'echo ${DOCKER_HUB_PSW} | docker login -u ${DOCKER_HUB_USR} --password-stdin'
                 sh "docker push stonzim/selenium"
             }
         }
     }
+
+    post {
+        always {
+            sh "docker logout"
+        }
+    }
+
 }
