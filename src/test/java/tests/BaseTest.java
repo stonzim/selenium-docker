@@ -8,7 +8,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariOptions;
 import org.slf4j.Logger;
@@ -20,7 +19,6 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import util.Config;
 import util.Constants;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 
